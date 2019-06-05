@@ -5,20 +5,9 @@ import (
 	"testing"
 )
 
-var exampleCode = `ONE
-TWO
-THR
-TWO
-THR
-ONE`
+var exampleAssembly = []byte{0x01, 0xFA, 0xCC, 0x11, 0xBB, 0xCC, 0x02}
 
-var exampleAssembly = []byte{0x01, 0x02, 0x03, 0x01, 0x01, 0x03, 0x03, 0x02, 0x02, 0x04, 0x11, 0x05, 0xAA, 0xBB}
-
-func TestAssemble(t *testing.T) {
-	result := Assemble(exampleCode)
-	fmt.Println(result)
-}
-
+// TODO...
 func TestDisassemble(t *testing.T) {
 	result := Disassemble(exampleAssembly)
 	fmt.Println(result)
